@@ -39,8 +39,9 @@
   - [제너레이터와 async/await](#제너레이터와-async/await)
   - [Error](#Error)
   - [모듈](#모듈)
-  - [Babel 과 Webpack](#Babel-과-Webpack)
+  - [Babel 과 Webpack](#Babel-과-Webpack)<br>
 
+[뒤로](https://github.com/bboyooning/TIL)
 
 
 
@@ -267,8 +268,9 @@ address 프로퍼티는 존재하지 않아서 삭제할 수 없다. 하지만 �
         new obj.foo(); // is not a function
         ```
         
-    - ES6의 메서드는 인스턴스를 생성할 수 없으므로 prototype 프로퍼티가 없고 프로토타입도 생성하지 않는다.
+    - ES6의 메서드는 인스턴스를 생성할 수 없으므로 prototype 프로퍼티가 없고 프로토타입도 생성하지 않는다.<br>
     
+[위로](#목차)
  <br>
  
  ## 스코프
@@ -282,6 +284,7 @@ address 프로퍼티는 존재하지 않아서 삭제할 수 없다. 하지만 �
 - 모든 식별자(변수 이름, 함수 이름, 클래스 이름 등)는 자신이 선언된 위치에 의해 다른 코드가 식별자 자신을 참조할 수 있는 범위가 결정됨 
 <br> → 이것이 `스코프` ! 즉,  `스코프` 는 식별자가 유효한 범위를 말함
 - 아래의 예제는 어떻게 작동할까?
+- <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b88bc925-8036-4041-8620-565f638e4294/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220627%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220627T041452Z&X-Amz-Expires=86400&X-Amz-Signature=13392a241f8b7df488ceb203cabf216edfdf3dac9c3b661e3d802fb08786af5b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject"></img>
     
     - 코드의 가장 바깥 영역과 foo 함수 내부에 같은 이름을 갖는 x 변수를 선언했고, (1)과 (2)에서 x 변수를 참조함
     - 이때 자바스크립트 엔진은 같은 이름의 두 변수 중에서 어떤 변수를 참조해야 할 것인지 결정해야 하는데, 이를 `식별자 결정` 이라고 함
@@ -434,4 +437,6 @@ address 프로퍼티는 존재하지 않아서 삭제할 수 없다. 하지만 �
 - 함수 선언문으로 정의된 bar 함수는 전역 코드가 실행되기 전에 먼저 평가되어 함수 객체를 생성함
 - 이때 생성된 bar 함수 객체는 자신이 정의된 스코프, 즉 전역 스코프를 기억함
 - 그리고 bar 함수가 호출되면 호출된 곳이 어디인지 관계없이 언제나 자신이 기억하고 있는 전역 스코프를 상위 스코프로 사용함
-- 따라서 위의 예제를 실행하면 아래와 같이 전역 변수 x 의 값 1을 두 번 출력한다.
+- 따라서 위의 예제를 실행하면 아래와 같이 전역 변수 x 의 값 1을 두 번 출력한다. <br>
+
+[위로](#목차)
