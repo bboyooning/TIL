@@ -727,6 +727,7 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
 - HTML 파싱과 외부 자바스크립트 파일의 로드가 비동기적으로 동시에 진행됨
 - 단, 자바스크립트 파싱과 실행은 자바스크립트 파일의 로드가 완료된 직후 진행되며 이때 HTML 파싱이 중단됨
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FsQd8c%2FbtrvhMKUIDi%2F8z4acSXPTfhDjoAW7QpagK%2Fimg.png">
+
 - 여러개의 script 태그에 async 를 지정하면 script 태그의 순서와는 상관없이 로드가 완료된 자바스크립트 부터 먼저 실행되므로 순서가 보장되지 않음
 
 <br>
@@ -736,4 +737,5 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
 - 단, 자바스크립트의 파싱과 실행은 HTML 파싱이 완료된 직후
 - 즉, DOM 생성이 완료된 직후 진행됨
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Ft0E6H%2FbtrvaJPEvX7%2FjIW8nHYtZnfo9KndoMKZkK%2Fimg.png">
+
 - 따라서 DOM 생성이 완료된 이후 실행되어야 할 자바스크립트에 유용함
