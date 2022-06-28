@@ -625,6 +625,7 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
 - 즉, 렌더링에 필요한 리소스는 모두 서버에 존재하므로 필요한 리소스를 서버에 요청하고 서버가 응답한 리소스를 파싱하여 렌더링하는 것
 - 서버에 요청을 전송하기 위해 브라우저는 주소창을 제공함
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F4jfhy%2Fbtrvbhya9KK%2FMSygerMcKAdZbWsJP33KzK%2Fimg.png">
+
 - 서버에 요청을 하기 위해서는 브라우저 주소창에 URL을 입력하고 엔터키를 누름 
 - URL의 호스트 이름이 DNS를 통해 IP 주소로 변환되고 이 IP 주소를 갖는 서버에게 요청을 전송함
 - 요청과 응답은 개발자도구 Network 패널에서 확인 가능
@@ -657,6 +658,7 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
 - 즉, 렌더 트리는 브라우저 화면에 렌더링되는 노드만으로 구성됨
 - 이후 완성된 렌더 트리는 각 HTML 요소의 레이아웃(위치와 크기)을 계산하는 데 사용되며 브라우저 화면에 픽셀을 렌더링하는 페인팅 처리에 입력됨
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcmYdP4%2Fbtru9Po3G9K%2FddHcmCNkMMaT7daDaRKDDK%2Fimg.png">
+
 - 브라우저의 렌더링 과정은 반복해서 실행될 수 있음 
 - 리렌더링은 성능에 악영향을 주는 작업이므로 가급적 빈번하게 발생하지 않도록 주의해야 함
 
