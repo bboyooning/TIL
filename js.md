@@ -697,4 +697,41 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
   - color, text-decoration 
   - border-style, border-radius
 
+<br>
 
+### 자바스크립트 파싱에 의한 HTML 파싱 중단
+- 렌더링 엔진과 자바스크립트 엔진은 직렬적으로 파싱을 수행함
+- 즉, HTML 문서에서 위에서 아래 방향으로 순차적으로 HTML, CSS, JS를 파싱하고 실행함
+- 이때 script 태그의 위치에 따라 HTML 파싱이 블로킹 되어 DOM 생성이 지연될 수 있으므로, script 태그의 위치는 중요한 의미를 갖음
+- 만약 자바스크립트 코드가 DOM을 변경하는 DOM API를 사용할 때 DOM 생성이 완료되지 않은 상태라면 문제가 발생할 수 있음
+- 또한 자바스크립트 로딩/파싱/실행으로 인해 HTML 요소들의 렌더링에 지장받아 페이지 로딩 시간이 늘어날 수 있음
+- 이를 해결하기 위해서 body 요소의 가장 아래에 자바스크립트를 위치시키거나, async/defer 어트리뷰트를 이용하는 방법이 있음
+
+<br>
+
+### script 태그의 async/defer 어트리뷰트
+- 자바스크립트 파싱에 의한 DOM 생성이 중단되는 문제를 근본적으로 해결하기 위해 HTML5부터 script 태그에 async와 defer 어트리뷰트가 추가되었음
+- async/defer 어트리뷰트는 src 어트리뷰트를 통해 외부 자바스크립트 파일을 로드하는 경우에만 사용이 가능함
+```js
+<script async src="extern.js"></script>
+<script defer src="extern.js"></script>
+```
+- async/defer 어트리뷰트를 사용하면 HTML 파싱과 외부 자바스크립트 파일의 로드가 비동기적으로 동시에 진행됨
+- 하지만 자바스크립트의 실행 시점에 차이가 존재
+
+<br>
+
+### async 어트리뷰트
+- HTML 파싱과 외부 자바스크립트 파일의 로드가 비동기적으로 동시에 진행됨
+- 단, 자바스크립트 파싱과 실행은 자바스크립트 파일의 로드가 완료된 직후 진행되며 이때 HTML 파싱이 중단됨
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FsQd8c%2FbtrvhMKUIDi%2F8z4acSXPTfhDjoAW7QpagK%2Fimg.png">
+- 여러개의 script 태그에 async 를 지정하면 script 태그의 순서와는 상관없이 로드가 완료된 자바스크립트 부터 먼저 실행되므로 순서가 보장되지 않음
+
+<br>
+
+### defer 어트리뷰트
+- async 와 마찬가지로 HTML 파싱과 외부 자바스크립트 파일의 로드가 비동기적으로 동시에 진행됨
+- 단, 자바스크립트의 파싱과 실행은 HTML 파싱이 완료된 직후
+- 즉, DOM 생성이 완료된 직후 진행됨
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Ft0E6H%2FbtrvaJPEvX7%2FjIW8nHYtZnfo9KndoMKZkK%2Fimg.png">
+- 따라서 DOM 생성이 완료된 이후 실행되어야 할 자바스크립트에 유용함
