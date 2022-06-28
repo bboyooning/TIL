@@ -624,6 +624,9 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
 - 브라우저의 핵심 기능은 필요한 리소스를 서버에 요청하고, 서버로부터 응답을 받아 브라우저에 시각적으로 렌더링 하는 것 
 - 즉, 렌더링에 필요한 리소스는 모두 서버에 존재하므로 필요한 리소스를 서버에 요청하고 서버가 응답한 리소스를 파싱하여 렌더링하는 것
 - 서버에 요청을 전송하기 위해 브라우저는 주소창을 제공함
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F4jfhy%2Fbtrvbhya9KK%2FMSygerMcKAdZbWsJP33KzK%2Fimg.png">
+- 서버에 요청을 하기 위해서는 브라우저 주소창에 URL을 입력하고 엔터키를 누름 
+- URL의 호스트 이름이 DNS를 통해 IP 주소로 변환되고 이 IP 주소를 갖는 서버에게 요청을 전송함
 - 요청과 응답은 개발자도구 Network 패널에서 확인 가능
 - 브라우저의 렌더링 엔진이 HTML을 파싱하는 도중에 외부 리소스를 로드하는 태그, 즉 CSS 파일 로드하는 link 태그, img 태그, script 태그 등 만나면 HTML의 파싱을 일시 중단하고 해당 리소스 파일로 서버를 요청하기 때문
 
@@ -653,6 +656,7 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
 - 따라서 브라우저 화면에 렌더링되지 않는 노드(meta, script 태그 등)와 CSS에 의해 비표시되는 노드들은 포함하지 않음
 - 즉, 렌더 트리는 브라우저 화면에 렌더링되는 노드만으로 구성됨
 - 이후 완성된 렌더 트리는 각 HTML 요소의 레이아웃(위치와 크기)을 계산하는 데 사용되며 브라우저 화면에 픽셀을 렌더링하는 페인팅 처리에 입력됨
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcmYdP4%2Fbtru9Po3G9K%2FddHcmCNkMMaT7daDaRKDDK%2Fimg.png">
 - 브라우저의 렌더링 과정은 반복해서 실행될 수 있음 
 - 리렌더링은 성능에 악영향을 주는 작업이므로 가급적 빈번하게 발생하지 않도록 주의해야 함
 
@@ -674,5 +678,23 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
 - 자바스크립트 코드에서 DOM 이나 CSSOM 을 변경하는 DOM API가 사용된 경우 DOM 이나 CSSOM이 변경됨
 - 이때 변경된 DOM과 CSSOM은 다시 렌더 트리로 결합되고 변경된 렌더 트리를 기반으로 레이아웃과 페인트 과정을 거쳐 브라우저의 화면에 다시 렌더링 함
 - 이를 `리플로우`, `리페인트` 라고 함
-- 리플로우는 레이아웃을 다시 계산하는 것을 말하는  
+- 리플로우는 레이아웃을 다시 계산하는 것을 말하는 것으로, <br>
+노드 추가/삭제, 요소 크기/위치 변경 등 레이아웃에 영향을 주는 변경이 발생한 경우에 한하여 실행됨
+- 리페인트는 재결합된 렌터 트리를 기반으로 다시 페인트를 하는 것
+- 기존 요소에 변경 사항이 생겼다고 항상 리플로우-리페인트가 일어나는 것은 아님
+- 레이아웃에 영향이 미치지 않는 단순 색상 변경 같은 사항은 리플로우 수행 없이 리페인트만 수행하게 됨
+- 하지만 리플로우가 일어나면 반드시 리페인트가 수행됨
+ 
+- 리플로우(Reflow)가 일어나는 대표적인 속성들
+  - position
+  - width, height, margin, padding
+  - border, border-width
+  - font-size, font-weight 
+  - line-height, text-align, overflow
+
+- 리페인트(Repaint)만 일어나는 대표적인 속성들
+  - background
+  - color, text-decoration 
+  - border-style, border-radius
+
 
