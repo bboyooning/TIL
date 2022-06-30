@@ -839,3 +839,4 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
 [위로](#목차)
 
 ### Promise
+- 
