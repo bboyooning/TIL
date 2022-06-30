@@ -647,8 +647,8 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
 - link 태그의 href 어트리뷰트에 지정된 CSS 파일을 서버에 요청하여 로드한 CSS 파일이나, 
 - style 태그 내의 CSS를 HTML과 동일한 파싱 과정을 거치며 해석하여 CSSOM 을 생성함
 - 이후 CSS 파싱을 완료하면 HTML 파싱이 중단된 지점부터 다시 HTML 파싱하기 시작하여 DOM 생성을 재개함
-
 <br>
+
 
 ### 렌더 트리 생성
 - 렌더링 엔진은 서버로부터 응답된 `HTML` 과 `CSS` 를 파싱하여 각각 `DOM` 과 `CSSOM` 를 생성함
@@ -739,8 +739,9 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Ft0E6H%2FbtrvaJPEvX7%2FjIW8nHYtZnfo9KndoMKZkK%2Fimg.png">
 
 - 따라서 DOM 생성이 완료된 이후 실행되어야 할 자바스크립트에 유용함
-
 <br>
+
+[위로](#목차)
 
 ## DOM
 - DOM(Document Object Model) 은 HTML 문서의 계층적 구조와 정보를 표현하며 이를 제어할 수 있는 API, 즉 프로퍼티와 메서드를 제공하는 트리 자료구조 
@@ -766,3 +767,75 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
 - 자식 노드가 없는 노드를 리프 노드 라고 함
 - 노드 객체들로 구성된 트리 자료구조를 DOM 이라 함
 - 노드 객체의 트리로 구조화되어 있기 때문에 DOM 을 DOM 트리라고 부름
+
+### 노드 객체의 타입
+- 렌더링 엔진은 HTML 문서를 파싱하여 다음과 같이 DOM을 생성함
+  ```html
+  <!DOCTYPE html>
+  <html>  
+    <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <ul>
+        <li id="apple">Apple</li>
+        <li id="banana">Banana</li>
+        <li id="orange">Orange</li>
+      </ul>
+      <script src="app.js"></script>
+    </body>
+  </html>
+  ```
+  
+  <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbPAbSi%2FbtrAVsA1ACk%2F7mEGOEkGVyjXitUwriik11%2Fimg.png">
+
+- 이처럼 DOM 은 노드 객체의 계층적인 구조로 구성됨
+- 노드 객체는 총 12개의 종류(노드 타입)가 있음
+- 그 중 4개가 중요함! 
+
+#### `문서 노드`
+- 문서 노드는 DOM 트리의 최상위에 존재하는 루트 노드로서 document 객체를 가리킴
+- document 객체는 브라우저가 렌더링한 HTML 문서 전체를 가리키는 객체로서 전역 객체 window의 document 프로퍼티에 바인딩 되어있음
+- 따라서 문서 노드는 window.document 또는 document 로 참조할 수 있음
+- 브라우저 환경의 모든 자바스크립트 코드는 script 태그에 의해 분리되어 있어도 하나의 전역 객체 window 를 공유함
+- 따라서 모든 자바스크립트 코드는 전역 객체 window의 document 프로퍼티에 바인딩 되어 있는 하나의 document 객체를 바라봄
+- 즉, HTML 문서당 document 객체는 유일함
+- 문서노드, 즉 document 객체는 DOM 트리의 루트 노드이므로 DOM 트리의 노드들에 접근하기 위한 진입점 역할을 담당
+- 즉, 요소, 어트리뷰트, 텍스트 노드에 접근하려면 문서 노드를 통해야 함
+
+#### `요소 노드`
+- 요소 노드는 HTML 요소를 가리키는 객체
+- HTML 요소 간의 중첩에 의해 부자 관계를 가지며, 이를 통해 정보를 구조화 함
+- 따라서 요소 노드는 문서의 구조를 표현함
+
+#### `어트리뷰트 노드`
+- 어트리뷰트 노드는 HTML 요소의 어트리뷰트를 가리키는 객체
+- 어트리뷰트가 지정된 HTML 요소의 요소 노드와 연결되어 있음
+- 어트리뷰트 노드는 부모 노드가 없고 요소 노드에만 연결되어 있음
+- 어트리뷰트를 참조하거나 변경하려면 먼저 요소 노드에 접근해야 함
+
+#### `텍스트 노드`
+- 텍스트 노드는 HTML 요소의 텍스트를 가리키는 객체
+- 요소 노드가 문서의 구조를 표현한다면, 텍스트 노드는 문서의 정보를 표현함
+- 텍스트 노드는 DOM 트리의 최종단
+- 텍스트 노드에 접근하려면 먼저 부모 노드인 요소 노드에 접근해야 함
+
+<br>
+
+### 노드 객체의 상속 구조
+- DOM 을 구성하는 노드 객체는 자신의 구조와 정보를 제어할 수 있는 DOM API 를 사용할 수 있음
+- DOM 을 구성하는 노드 객체는 ECMAScript 사양에 정의된 표준 빌트인 객체가 아닌, 브라우저 환경에서 추가적으로 제공하는 호스트 객체임
+- 하지만 노드 객체도 자바스크립트 객체이므로 프로토타입에 의한 상속 구조를 갖음
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcDX134%2FbtrAYmthuJ7%2FGlcerFsrqKiqY62CvNFbpK%2Fimg.png">
+- 모든 노드 객체는 Object, EventTarget, Node 인터페이스를 상속받음
+- input 요소 노드 객체의 특성
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcetzMz%2FbtrAWA6BMpc%2FmEfMLikTstxrjQQkLvR2BK%2Fimg.png">
+- 노드 객체의 상속 구조는 개발자 도구 Elements 패널 우측의 Properties 패널에서 확인 가능
+- DOM 은 HTML 문서의 계층적 구조와 정보를 표현하는 것은 물론 노드 객체의 종류, 즉 노드 타입에 따라 필요한 기능을 프로퍼티와 메서드의 집합인 DOM API 로 제공함
+- 이 DOM API 를 통해 HTML 의 구조나 내용 또는 스타일 등을 동적으로 조작할 수 있음
+<br>
+
+[위로](#목차)
+
+### Promise
