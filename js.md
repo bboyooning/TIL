@@ -35,7 +35,7 @@
   - [비동기 프로그래밍](#비동기-프로그래밍)
   - [Ajax](#Ajax)
   - [REST API](#Rest-API)
-  - [Promise](#Promise)
+  - [프로미스](#프로미스)
   - [제너레이터와 async/await](#제너레이터와-async/await)
   - [Error](#Error)
   - [모듈](#모듈)
@@ -743,6 +743,7 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
 
 [위로](#목차)
 
+
 ## DOM
 - DOM(Document Object Model) 은 HTML 문서의 계층적 구조와 정보를 표현하며 이를 제어할 수 있는 API, 즉 프로퍼티와 메서드를 제공하는 트리 자료구조 
 <br>
@@ -831,6 +832,7 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
 - 모든 노드 객체는 Object, EventTarget, Node 인터페이스를 상속받음
 - input 요소 노드 객체의 특성
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcetzMz%2FbtrAWA6BMpc%2FmEfMLikTstxrjQQkLvR2BK%2Fimg.png">
+
 - 노드 객체의 상속 구조는 개발자 도구 Elements 패널 우측의 Properties 패널에서 확인 가능
 - DOM 은 HTML 문서의 계층적 구조와 정보를 표현하는 것은 물론 노드 객체의 종류, 즉 노드 타입에 따라 필요한 기능을 프로퍼티와 메서드의 집합인 DOM API 로 제공함
 - 이 DOM API 를 통해 HTML 의 구조나 내용 또는 스타일 등을 동적으로 조작할 수 있음
@@ -838,5 +840,5 @@ console.log(x, rest) // 1 { y: 2, z: 3 }
 
 [위로](#목차)
 
-### Promise
+## 프로미스
 - 
