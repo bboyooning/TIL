@@ -1037,6 +1037,7 @@ get(`${url}/posts/1`, ({ userId }) => {
 - 비동기 처리 실패: reject 함수 호출해 프로미스를 rejected 상태로 변경
 - 이처럼 프로미스의 상태는 resolve 또는 reject 함수 호출하는 것으로 결정됨
 - 비동기 처리 성공하면 pending -> fulfilled 로 변화하고, 비동기 처리 결과인 1을 값으로 가짐
+
   <img src="https://velog.velcdn.com/images%2Fniyu%2Fpost%2F58a9919b-b31f-4e69-aecd-ac48c5abb92e%2Fimage.png">
 
 - 비동기 처리 실패하면 pending -> rejected 로 변화하고, 비동기 처리 결과인 Error 객체를 값으로 가짐 
