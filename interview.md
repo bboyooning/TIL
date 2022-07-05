@@ -349,3 +349,5 @@ ex) Create : 데이터 생성(POST), Read : 데이터 조회(GET), Update : 데�
 3. 자원에 대한 행위의 내용: HTTP Message Pay Load
 
 - RESTful 이란, REST의 기본 원칙을 성실히 지킨 서비스 디자인을 RESTful 이라고 표현합니다. 
+
+# REST API 란?
