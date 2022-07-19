@@ -730,7 +730,6 @@ console.log(person1.name === person2.name); // (2)
   - 매개변수의 개수보다 인수를 더 많이 전달한 경우(multiply(1,2,3)) 초과된 인수는 무시됨.
     하지만 그냥 버려지는 것은 아님.
   - 모든 인수는 암묵적으로 arguments 객체의 프로퍼티로 보관됨
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4c1c33ff-4c4c-4994-be67-53fe55ce948e/Untitled.png)
   - arguments 객체는 인수를 프로퍼티의 값으로 소유하며 프로퍼티의 키는 인수의 순서를 나타냄
   - arguments 객체의 callee 프로퍼티는 호출되어 arguments 객체를 생성한 함수,
     즉 함수 자신을 가리킴
