@@ -51,7 +51,7 @@
   - Babel 과 Webpack
 - ## <a href="./react.md">React</a>
   - 리액트
-  - 리액트는 라이브러리 or 프레임워크 ?
+  - 리액트는 라이브러리 or 프레임워크?
   - 리액트를 사용하는 이유
   - virtual DOM
   - 리액트에서 클래스 컴포넌트와 함수 컴포넌트의 차이
@@ -69,17 +69,17 @@
   - 컴포넌트의 라이프 사이클 메서드
   - 메서드 종류
   - Hooks의 종류
-    useState
-    useEffect
-    useReducer
-    useMemo
-    useCallback
-    useRef
-    커스텀 Hooks
-    useMemo와 useCallback의 차이
-  - 리액트에서 setState는 비동기 동작인가요 동기 동작인가요?
+    - useState
+    - useEffect
+    - useReducer
+    - useMemo
+    - useCallback
+    - useRef
+    - useMemo ↔️ useCallback
+    - 커스텀 Hooks
+  - 리액트에서 setState는 비동기 or 동기?
   - setState가 비동기 동작을 취했을 때 얻을 수 있는 이점
-  - useLayoutEffect?
+  - useLayoutEffect
   - 리액트의 성능개선 방법
   - 컴포넌트에서 이벤트를 실행시키기 위한 핸들링 방법
   - SPA 장단점
