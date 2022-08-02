@@ -449,29 +449,36 @@
 
 - JWT 토큰의 과정
 
-#### REST Api
+### REST Api
 
-- REST(Representational State Transfer)의 약자로, 자원을 이름으로 구분하여 해당 자원의 상태를 주고 받는 모든 것을 의미합니다.
-- REST는 HTTP 장점을 최대한 활용할 수 있는 아키텍처로서, HTTP를 기반으로 클라이언트가 서버의 리소스에 접근하는 방식을 규정한 아키텍처이고, 이러한 REST 를 기반으로 서비스 API를 구현한 것을 REST API 라고 합니다.
-- 즉, REST 란
+- REST API
+  REST는 HTTP 프로토콜을 통해 API를 설계하기 위한 아키텍처 스타일입니다.
+  <br>
+  HTTP 를 기반으로 클라이언트가 서버의 리소스에 접근하는 방식을 규정한 아키텍처 이며, 이러한 REST 를 기반으로 서비스 API 를 구현한 것을 REST API 라고 합니다.
+  <br>
+  주요 이점은 뛰어난 유연성입니다. 개발자는 서버에서 직접 웹 애플리케이션이나 사이트의 사용자에게 데이터를 제공해야 하는 모든 곳에서 REST API를 사용합니다.
 
-1. HTTP URI를 통해 리소스를 명시하고,
-2. HTTP 메소드(GET, POST, PUT, DELETE)를 통해
-3. 해당 자원(URI)에 대한 CRUD Operation 을 적용하는 것을 의미 합니다.
-
-- CRUD Operation 이란 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create, Read, Update, Delete를 묶어서 일컫는 말입니다.
-- REST에서의 CRUD Operation 동작 예시
-  ex) Create : 데이터 생성(POST), Read : 데이터 조회(GET), Update : 데이터 수정(PUT), Delete: 데이터 삭제(DELETE)
-
-- REST 구성 요소
+- REST API 구성요소
 
 1. 자원(Resource): HTTP URI
 2. 자원에 대한 행위: HTTP Method
 3. 자원에 대한 행위의 내용: HTTP Message Pay Load
 
-- RESTful 이란, REST의 기본 원칙을 성실히 지킨 서비스 디자인을 RESTful 이라고 표현합니다.
+->
 
-# REST API 란?
+1. HTTP URI를 통해 리소스를 명시하고,
+2. HTTP 메소드(GET, POST, PUT, DELETE)를 통해
+3. 해당 자원(URI)에 대한 CRUD Operation 을 적용하는 것을 의미 합니다.
+
+- REST API를 설계하는데 중요한 것이 있을까
+- HTTP 요청 메서드에 대해서 아는대로 설명
+- HTTP 상태 코드를 아는대로 설명
+
+- CRUD Operation 이란 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create, Read, Update, Delete를 묶어서 일컫는 말입니다.
+- REST에서의 CRUD Operation 동작 예시
+  ex) Create : 데이터 생성(POST), Read : 데이터 조회(GET), Update : 데이터 수정(PUT), Delete: 데이터 삭제(DELETE)
+
+- RESTful 이란, REST의 기본 원칙을 성실히 지킨 서비스 디자인을 RESTful 이라고 표현합니다.
 
 ### 비동기 프로그래밍
 
@@ -547,3 +554,5 @@ setTimeout이나 setInterval과 같은 비동기 함수의 콜백 함수 또는 
 마이크로태스크 큐는 태스크 큐보다 우선순위가 높습니다.
 
 따라서 이벤트 루프에서 마이크로태스크 큐에 쌓인 태스크를 먼저 콜 스택에 올려준 뒤, 태스크 큐에 잔여 태스크를 콜 스택에 올립니다.
+
+###
