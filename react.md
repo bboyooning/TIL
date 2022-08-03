@@ -99,3 +99,8 @@
 - 우리가 state를 바꾸고 돔을 다시 만들려면, 새로운 객체나 배열을 만들어 새로운 참조값을 만들고 react에게 이 값은 이전과 다른 참조값임을 알려야 합니다.
 - 따라서 기존의 state 값은 변하지 않도록 불변하게 만들고 새롭게 복사한 객체로 업데이트를 시켜 이전과 다른 값임을 알려야 합니다.
 - 이렇게 state 값을 포함한 변수도 불변성을 갖게 해야 다른 버그나 예외사항이 일어나지 않는다.
+
+- React에서 immutable variable을 만드는 여러가지 방법이 있습니다.
+  - 자바스크립트 표준 함수 ES6 Object.assign() 또는 object-rest-spread
+  - 자바스크립트 라이브러리 immutable-js
+  - react공식 문서에서 추천하는 패키지인 immutability-helper
