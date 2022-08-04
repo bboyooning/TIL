@@ -116,3 +116,8 @@
   - 자바스크립트 표준 함수 ES6 Object.assign() 또는 object-rest-spread
   - 자바스크립트 라이브러리 immutable-js
   - react공식 문서에서 추천하는 패키지인 immutability-helper
+
+#### 리액트 네이티브에서 axios 말고 fetch 쓰는 이유
+
+- axios 는 라이브러리로 다운받아 따로 import 해야 하지만, fetch 는 자바스크립트가 가진 내장 라이브러리 라서 따로 import 하지 않고도 쓸 수 있어서 빌드 시에 용량이 줄어든다.
+- 또한 리액트 라이브러리는 버전이 빠르게 업데이트 되는 특성이 있기 때문에 최대한 라이브러리 의존성을 낮춰야 한다.
