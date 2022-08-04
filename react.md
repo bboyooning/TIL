@@ -43,6 +43,18 @@
 - 사전 렌더링을 위해 사용해 본 함수가 있다면?
 - Suspense
 
+<br>
+
+- 리액트 네이티브
+- 리액트 ↔️ 리액트 네이티브
+- 리액트 네이티브 ↔️ Flutter
+- Expo ↔️ react-native-cli
+- 리액트 네이티브에서 axios 말고 fetch 쓰는 이유
+- iOS, Android와 RN이 상호작용 하는 방식
+- RN navigation
+
+<br>
+
 ### 리액트는 프레임워크 or 라이브러리 ?
 
 - 결론적으로 리액트는 사용자 인터페이스를 만들기 위한 JS 라이브러리 입니다.
