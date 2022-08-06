@@ -50,6 +50,7 @@
   - 모듈
   - Babel 과 Webpack
 - ## <a href="./react.md">React</a>
+
   - 리액트
   - 리액트는 라이브러리 or 프레임워크?
   - 리액트를 사용하는 이유
@@ -92,5 +93,16 @@
   - Next.jsr 를 구성하는 기본 설정 파일
   - 사전 렌더링을 위해 사용해 본 함수가 있다면?
   - Suspense
+
+  <br>
+
+  - 리액트 네이티브
+  - 리액트 ↔️ 리액트 네이티브
+  - 리액트 네이티브 ↔️ Flutter
+  - Expo ↔️ react-native-cli
+  - 리액트 네이티브에서 axios 말고 fetch 쓰는 이유
+  - iOS, Android와 RN이 상호작용 하는 방식
+  - RN navigation
+
 - ## <a href="./ts.md">TypeScript</a>
 - ## <a href="./interview.md">Interview</a>
