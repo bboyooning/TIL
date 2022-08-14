@@ -91,12 +91,16 @@
 
 #### Stack
 
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FQLmgD%2FbtriadO71zj%2Fy3IaQwptHsuFd4dJjKOQBK%2Fimg.png" alt="Stack">
+
 - 순서가 유지되는 선형 데이터 구조입니다.
 - 리스트의 한쪽에서만 데이터의 삽입과 삭제가 일어나므로, 가장 마지막 요소부터 가장 처음 요소를 처리하는 LIFO(후입선출) 메커니즘을 가지고 있습니다.
 - 기억공간이 부족한 경우 데이터를 삽입하는 경우 Overflow 가 발생하고, 삭제할 데이터가 없을 때 데이터를 삭제하고자 하면 Underflow 가 발생합니다.
 - 데이터를 받는 순서대로 정렬되고 메모리의 크기가 동적이지만 한번에 하나의 데이터만 처리할 수 있습니다.
 
 #### Queue
+
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FuXE7T%2Fbtrh94R1tqR%2FxQ5Ig2jbUlaEx0AZyVKTZK%2Fimg.png" alt="Queue">
 
 - 큐는 스택과 비슷하지만 FIFO(선입선출) 메커니즘을 가지고 있습니다.
 - 리스트의 한쪽에서는 삽입이 일어나고, 다른 쪽에서는 삭제가 일어납니다.
