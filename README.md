@@ -105,6 +105,7 @@
   - RN navigation
 
 - ## <a href="./ts.md">TypeScript</a>
+- ## <a href="./data_structure.md">자료구조</a>
 - ## <a href="./interview.md">Interview</a>
   - 자기소개
   - 지원동기
