@@ -54,7 +54,9 @@
   - 리액트
   - 리액트는 라이브러리 or 프레임워크?
   - 리액트를 사용하는 이유
+    - 실제로 리액트를 사용하면서 좋았던 점(↔️ 바닐라 js)
   - virtual DOM
+    - 실제로 virtual DOM 을 이용해봤을 때 느낀점
   - 리액트에서 클래스 컴포넌트와 함수 컴포넌트의 차이
   - 리액트에서 함수형 컴포넌트라고 부르지 않고 함수 컴포넌트라고 부르는 이유
   - props와 state의 차이
@@ -82,6 +84,7 @@
   - setState가 비동기 동작을 취했을 때 얻을 수 있는 이점
   - useLayoutEffect
   - 리액트의 성능개선 방법
+    - useMemo / useCallback 써보면서 생긴 버그들은 없었는지
   - 컴포넌트에서 이벤트를 실행시키기 위한 핸들링 방법
   - SPA 장단점
   - SSR
@@ -106,6 +109,24 @@
 
 - ## <a href="./ts.md">TypeScript</a>
 - ## <a href="./data_structure.md">자료구조</a>
+  - 자료구조
+  - List
+    - Array List
+    - Linked List
+    - Cotiguous List
+    - Stack
+    - Queue
+    - Graph
+    - Tree
+  - Set
+    - HashSet
+    - SortedSet
+      - TreeSet
+  - Map
+    - HashTable
+    - HashMap
+    - SortedMap
+      - TreeMap
 - ## <a href="./interview.md">Interview</a>
   - 자기소개
   - 지원동기
@@ -116,5 +137,8 @@
   - FE-BE 간의 협업은 어떤 방식? (문제가 있었을텐데 이를 해결한 경험)
   - Trello 등 본인이 써본 협업 툴의 장단점
   - 기업협업 중 현직 개발자들과 일했을 때 어렵진 않았는지, 어떤식으로 협업 해나갔는지
-  - 프로젝트 진행하면서 개발 외에 본인이 맡은 역할
+  - 프로젝트 때 본인이 맡은 페이지 및 기능
+  - 프로젝트 때 개발 외에 본인이 맡은 역할
+  - 에러가 생겼을 때 대처하는 방법
+  - 실제로 리액트를 써보면서 좋았던 점
   - 향후 5년, 10년, 개발자로서의 최종 목표
