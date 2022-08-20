@@ -116,6 +116,26 @@
   - RN navigation
 
 - ## <a href="./ts.md">TypeScript</a>
+  - 타입스크립트
+  - 왜 타입스크립트 를 쓰나요?
+    - 에러의 사전 방지
+    - 코드 가이드 및 자동 완성으로 인한 개발 생산성 향상
+  - 타입스크립트 기본 타입
+    - String
+    - Number
+    - Boolean
+    - Object
+    - Array
+    - Tuple
+    - Enum
+    - Any
+    - Void
+    - Null
+    - Undefined
+    - Never
+  - 제네릭(Generics)
+    - 제네릭을 사용하는 이유
+    - 제네릭이 없다면?
 - ## <a href="./data_structure.md">자료구조</a>
   - 자료구조
   - List
