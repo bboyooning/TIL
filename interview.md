@@ -792,26 +792,39 @@ setTimeout이나 setInterval과 같은 비동기 함수의 콜백 함수 또는 
 - 윈도우 터미널(cmd or powershell)에서 아래의 명령어를 입력하면 설치된 NVM 버전 확인 가능
 
   > `nvm version`
-  > ![](https://velog.velcdn.com/images/bboyooning/post/f66137f6-8529-4f3e-a24d-873812c723b8/image.png)
+  > <br>
+
+  ![](https://velog.velcdn.com/images/bboyooning/post/f66137f6-8529-4f3e-a24d-873812c723b8/image.png)
 
 - 아래의 명령어를 입력하면 nvm 에 설치된 node 리스트를 확인할 수 있음
 
   > `nvm ls`
-  > ![](https://velog.velcdn.com/images/bboyooning/post/a954034b-cfd2-4471-8900-94c58c013c1f/image.png)
+  > <br>
+
+  ![](https://velog.velcdn.com/images/bboyooning/post/a954034b-cfd2-4471-8900-94c58c013c1f/image.png)
 
 - 현재 설치할 수 있는 Node 버전 리스트 확인하기
   - https://nodejs.org/ko/download/releases/
 - 설치하고 싶은 Node 버전을 아래의 명령어로 설치
 
   > `nvm install 버전`
-  > ![](https://velog.velcdn.com/images/bboyooning/post/629e4185-070f-4e19-aabc-fed879f19da2/image.png)
+  > <br>
+
+  ![](https://velog.velcdn.com/images/bboyooning/post/629e4185-070f-4e19-aabc-fed879f19da2/image.png)
 
 - 추가한 Node.js 로 버전을 바꾸고 싶으면 아래의 명령어를 이용하여 바꿈
 
   > `nvm use 버전`
-  > ![](https://velog.velcdn.com/images/bboyooning/post/173ee8df-709f-41b1-ac24-eab6300c6ca0/image.png)
+  > <br>
+
+  ![](https://velog.velcdn.com/images/bboyooning/post/173ee8df-709f-41b1-ac24-eab6300c6ca0/image.png)
+  <br>
+
   > 이때 위와 같은 에러가 발생할 수 있는데, 이건 명령 프롬포트 창을 관리자 모드로 열어줘야함
-  > ![](https://velog.velcdn.com/images/bboyooning/post/a2b185ed-d2fe-47ec-97dc-9f580489b01e/image.png)
+  > <br>
+
+  ![](https://velog.velcdn.com/images/bboyooning/post/a2b185ed-d2fe-47ec-97dc-9f580489b01e/image.png)
 
 - 관리자 모드로 열어준 다음 변경하면 에러없이 Node.js 버전 변경됨
+  <br>
   ![](https://velog.velcdn.com/images/bboyooning/post/1b883956-6658-47fc-b229-53ff92186611/image.png)
